@@ -66,10 +66,48 @@ namespace SystAnalys_lr1
             string s="";
             int j = 0;
             s =Convert.ToString( distance[endpoint]);
-
+            //s += "\n";
+            //for (i = 0; i < V.Count; i++) if (distance[i] != int.MaxValue)
+            //    {
+            //        j = i + 1;
+            //        s += Convert.ToString(m) + " >" + Convert.ToString((j)) + "=" + Convert.ToString(distance[i]) + "\n";
+            //    }
+            //    cout << m << " > " << i + 1 << " = " << distance[i] << endl;
+            //else cout << m << " > " << i + 1 << " = " << "маршрут недоступен" << endl;
             return s;
         }
-       
+        public int Dijkstra(int [,] AMatrix, int V)
+        {
+            distance = new int[V];
+            int count, index = 0, i, u, m = 1;
+            startPoint = 0;
+            visited = new bool[V];
+            for (i = 0; i < V; i++)
+            {
+                distance[i] = int.MaxValue; visited[i] = false;
+            }
+            distance[startPoint] = 0;
+            for (count = 0; count < V - 1; count++)
+            {
+                int min = int.MaxValue;
+                for (i = 0; i < V; i++)
+                    if (!visited[i] && distance[i] <= min)
+                    {
+                        min = distance[i]; index = i;
+                    }
+                u = index;
+                visited[u] = true;
+                for (i = 0; i < V; i++)
+                    if (!visited[i] && AMatrix[u, i] != 0 && distance[u] != int.MaxValue &&
+                    distance[u] + AMatrix[u, i] < distance[i])
+                        distance[i] = distance[u] + AMatrix[u, i];
+            }
+            //"Стоимость пути из начальной вершины до остальных:\t\n";
+            int s = 0;
+           return s = distance[V - 1];
+
+
+        }
     }
 
 
