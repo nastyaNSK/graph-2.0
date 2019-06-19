@@ -66,17 +66,10 @@ namespace SystAnalys_lr1
             string s="";
             int j = 0;
             s =Convert.ToString( distance[endpoint]);
-            //s += "\n";
-            //for (i = 0; i < V.Count; i++) if (distance[i] != int.MaxValue)
-            //    {
-            //        j = i + 1;
-            //        s += Convert.ToString(m) + " >" + Convert.ToString((j)) + "=" + Convert.ToString(distance[i]) + "\n";
-            //    }
-            //    cout << m << " > " << i + 1 << " = " << distance[i] << endl;
-            //else cout << m << " > " << i + 1 << " = " << "маршрут недоступен" << endl;
+
             return s;
         }
-        
+       
     }
 
 
