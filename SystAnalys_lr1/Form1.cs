@@ -33,6 +33,75 @@ namespace SystAnalys_lr1
             sheet.Image = G.GetBitmap();
         }
 
+        //кнопка - выбрать вершину
+        private void selectButton_Click(object sender, EventArgs e)
+        {
+            selectButton.Enabled = false;
+            drawVertexButton.Enabled = true;
+            drawEdgeButton.Enabled = true;
+            deleteButton.Enabled = true;
+            G.clearSheet();
+            G.drawALLGraph(V, E);
+            sheet.Image = G.GetBitmap();
+            selected1 = -1;
+        }
+
+        //кнопка - рисовать вершину
+        private void drawVertexButton_Click(object sender, EventArgs e)
+        {
+            drawVertexButton.Enabled = false;
+            selectButton.Enabled = true;
+            drawEdgeButton.Enabled = true;
+            deleteButton.Enabled = true;
+            G.clearSheet();
+            G.drawALLGraph(V, E);
+            sheet.Image = G.GetBitmap();
+        }
+
+        //кнопка - рисовать ребро
+        private void drawEdgeButton_Click(object sender, EventArgs e)
+        {
+            drawEdgeButton.Enabled = false;
+            selectButton.Enabled = true;
+            drawVertexButton.Enabled = true;
+            deleteButton.Enabled = true;
+            G.clearSheet();
+            G.drawALLGraph(V, E);
+            sheet.Image = G.GetBitmap();
+            selected1 = -1;
+            selected2 = -1;
+        }
+
+        //кнопка - удалить элемент
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            deleteButton.Enabled = false;
+            selectButton.Enabled = true;
+            drawVertexButton.Enabled = true;
+            drawEdgeButton.Enabled = true;
+            G.clearSheet();
+            G.drawALLGraph(V, E);
+            sheet.Image = G.GetBitmap();
+        }
+
+        //кнопка - удалить граф
+        private void deleteALLButton_Click(object sender, EventArgs e)
+        {
+            selectButton.Enabled = true;
+            drawVertexButton.Enabled = true;
+            drawEdgeButton.Enabled = true;
+            deleteButton.Enabled = true;
+            const string message = "Вы действительно хотите полностью удалить граф?";
+            const string caption = "Удаление";
+            var MBSave = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (MBSave == DialogResult.Yes)
+            {
+                V.Clear();
+                E.Clear();
+                G.clearSheet();
+                sheet.Image = G.GetBitmap();
+            }
+        }
 
         //кнопка - матрица смежности
         private void buttonAdj_Click(object sender, EventArgs e)
@@ -359,28 +428,7 @@ namespace SystAnalys_lr1
 
 
 
-        private void Save_Click(object sender, EventArgs e)
-        {
-            //сериализируем вершины 
-
-            
-            
-                File.Delete("vertex.xml");
-                File.Delete("Edge.xml");
-                XmlSerializer Ver = new XmlSerializer(typeof(List<Vertex>));
-                FileStream file = new FileStream("vertex.xml", FileMode.OpenOrCreate);
-                Ver.Serialize(file, V);
-                Console.WriteLine("Объект сериализован");
-                file.Close();
-                //сериализируем ребра
-                XmlSerializer Edge = new XmlSerializer(typeof(List<Edge>));
-                FileStream file_2 = new FileStream("Edge.xml", FileMode.OpenOrCreate);
-                Edge.Serialize(file_2, E);
-                Console.WriteLine("Объект сериализован");
-                file_2.Close();
-                        
-
-        }
+      
 
         private void Load_Click(object sender, EventArgs e)
         {   //десериализируем вершины
