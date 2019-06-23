@@ -268,7 +268,24 @@ namespace SystAnalys_lr1
             }
         }
 
-       
+        //создание матрицы смежности и вывод в листбокс
+        private void createAdjAndOut()
+        {
+            AMatrix = new int[V.Count, V.Count];
+            G.fillAdjacencyMatrix(V.Count, E, AMatrix);
+            //listBoxMatrix.Items.Clear();
+            string sOut = "    ";
+            for (int i = 0; i < V.Count; i++)
+                sOut += (i + 1) + " ";
+            //listBoxMatrix.Items.Add(sOut);
+            for (int i = 0; i < V.Count; i++)
+            {
+                sOut = (i + 1) + " | ";
+                for (int j = 0; j < V.Count; j++)
+                    sOut += AMatrix[i, j] + " ";
+                //listBoxMatrix.Items.Add(sOut);
+            }
+        }
 
         //создание матрицы инцидентности и вывод в листбокс
         //private void createIncAndOut()
