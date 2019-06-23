@@ -115,7 +115,38 @@ namespace SystAnalys_lr1
             //createIncAndOut();
         }
 
-       
+        private void sheet_MouseClick(object sender, MouseEventArgs e)
+        {
+            //нажата кнопка "выбрать вершину", ищем степень вершины
+            if (selectButton.Enabled == false)
+            {
+                for (int i = 0; i < V.Count; i++)
+                {
+                    if (Math.Pow((V[i].x - e.X), 2) + Math.Pow((V[i].y - e.Y), 2) <= G.R * G.R)
+                    {
+                        if (selected1 != -1)
+                        {
+                            selected1 = -1;
+                            G.clearSheet();
+                            G.drawALLGraph(V, E);
+                            sheet.Image = G.GetBitmap();
+                        }
+                        if (selected1 == -1)
+                        {
+                            G.drawSelectedVertex(V[i].x, V[i].y);
+                            selected1 = i;
+                            sheet.Image = G.GetBitmap();
+                            createAdjAndOut();
+                            //listBoxMatrix.Items.Clear();
+                            int degree = 0;
+                            for (int j = 0; j < V.Count; j++)
+                                degree += AMatrix[selected1, j];
+                            //listBoxMatrix.Items.Add("Степень вершины №" + (selected1 + 1) + " равна " + degree);
+                            break;
+                        }
+                    }
+                }
+            }
             //нажата кнопка "рисовать вершину"
             if (drawVertexButton.Enabled == false)
             {
