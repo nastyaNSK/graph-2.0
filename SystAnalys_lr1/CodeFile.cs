@@ -36,7 +36,7 @@ namespace SystAnalys_lr1
         }
     }
 
-    class DrawGraph
+   public class DrawGraph
     {
         Bitmap bitmap;
         Pen blackPen;
