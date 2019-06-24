@@ -1,0 +1,9 @@
+D:\git_sibsuty\graph-2.0\TestMatrix\bin\Debug\TestMatrix.dll
+D:\git_sibsuty\graph-2.0\TestMatrix\bin\Debug\TestMatrix.pdb
+D:\git_sibsuty\graph-2.0\TestMatrix\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\git_sibsuty\graph-2.0\TestMatrix\bin\Debug\SystAnalys_lr1.exe
+D:\git_sibsuty\graph-2.0\TestMatrix\bin\Debug\SystAnalys_lr1.pdb
+D:\git_sibsuty\graph-2.0\TestMatrix\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+D:\git_sibsuty\graph-2.0\TestMatrix\obj\Debug\TestMatrix.csprojResolveAssemblyReference.cache
+D:\git_sibsuty\graph-2.0\TestMatrix\obj\Debug\TestMatrix.dll
+D:\git_sibsuty\graph-2.0\TestMatrix\obj\Debug\TestMatrix.pdb

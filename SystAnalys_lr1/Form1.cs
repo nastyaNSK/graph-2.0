@@ -196,6 +196,7 @@ namespace SystAnalys_lr1
                     {
                         G.drawVertex(V[selected1].x, V[selected1].y, (selected1 + 1).ToString());
                         selected1 = -1;
+
                         sheet.Image = G.GetBitmap();
                     }
                 }
@@ -330,7 +331,7 @@ namespace SystAnalys_lr1
         private void DFSchain(int u, int endV, List<Edge> E, int[] color, string s)
         {
             //вершину не следует перекрашивать, если u == endV (возможно в нее есть несколько путей)
-            if (u != endV)  
+            if (u != endV)
                 color[u] = 2;
             else
             {
@@ -432,37 +433,37 @@ namespace SystAnalys_lr1
         {
             //сериализируем вершины 
 
-            
-            
-                File.Delete("vertex.xml");
-                File.Delete("Edge.xml");
-                XmlSerializer Ver = new XmlSerializer(typeof(List<Vertex>));
-                FileStream file = new FileStream("vertex.xml", FileMode.OpenOrCreate);
-                Ver.Serialize(file, V);
-                Console.WriteLine("Объект сериализован");
-                file.Close();
-                //сериализируем ребра
-                XmlSerializer Edge = new XmlSerializer(typeof(List<Edge>));
-                FileStream file_2 = new FileStream("Edge.xml", FileMode.OpenOrCreate);
-                Edge.Serialize(file_2, E);
-                Console.WriteLine("Объект сериализован");
-                file_2.Close();
-                        
+
+
+            File.Delete("vertex.xml");
+            File.Delete("Edge.xml");
+            XmlSerializer Ver = new XmlSerializer(typeof(List<Vertex>));
+            FileStream file = new FileStream("vertex.xml", FileMode.OpenOrCreate);
+            Ver.Serialize(file, V);
+            Console.WriteLine("Объект сериализован");
+            file.Close();
+            //сериализируем ребра
+            XmlSerializer Edge = new XmlSerializer(typeof(List<Edge>));
+            FileStream file_2 = new FileStream("Edge.xml", FileMode.OpenOrCreate);
+            Edge.Serialize(file_2, E);
+            Console.WriteLine("Объект сериализован");
+            file_2.Close();
+
 
         }
 
         private void Load_Click(object sender, EventArgs e)
         {   //десериализируем вершины
-             FileStream file = new FileStream("vertex.xml", FileMode.Open, FileAccess.Read, FileShare.None);
-             XmlSerializer Ver = new XmlSerializer(typeof(List<Vertex>));
-                V = (List<Vertex>)Ver.Deserialize(file);
-                file.Close();
-                //десериализируем ребра
-                FileStream file_2 = new FileStream("Edge.xml", FileMode.Open, FileAccess.Read, FileShare.None);
-                XmlSerializer Edge = new XmlSerializer(typeof(List<Edge>));
+            FileStream file = new FileStream("vertex.xml", FileMode.Open, FileAccess.Read, FileShare.None);
+            XmlSerializer Ver = new XmlSerializer(typeof(List<Vertex>));
+            V = (List<Vertex>)Ver.Deserialize(file);
+            file.Close();
+            //десериализируем ребра
+            FileStream file_2 = new FileStream("Edge.xml", FileMode.Open, FileAccess.Read, FileShare.None);
+            XmlSerializer Edge = new XmlSerializer(typeof(List<Edge>));
             E = (List<Edge>)Edge.Deserialize(file_2);
             file_2.Close();
-            
+
         }
         public void Load_Click()
         {   //десериализируем вершины
@@ -488,5 +489,5 @@ namespace SystAnalys_lr1
             G.drawALLGraph(V, E);
         }
     }
-    }
+}
 

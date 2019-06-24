@@ -1,0 +1,9 @@
+D:\git_sibsuty\graph-2.0\SystAnalys_lr1\bin\Debug\SystAnalys_lr1.exe.config
+D:\git_sibsuty\graph-2.0\SystAnalys_lr1\bin\Debug\SystAnalys_lr1.exe
+D:\git_sibsuty\graph-2.0\SystAnalys_lr1\bin\Debug\SystAnalys_lr1.pdb
+D:\git_sibsuty\graph-2.0\SystAnalys_lr1\obj\Debug\SystAnalys_lr1.csprojResolveAssemblyReference.cache
+D:\git_sibsuty\graph-2.0\SystAnalys_lr1\obj\Debug\SystAnalys_lr1.Form1.resources
+D:\git_sibsuty\graph-2.0\SystAnalys_lr1\obj\Debug\SystAnalys_lr1.Properties.Resources.resources
+D:\git_sibsuty\graph-2.0\SystAnalys_lr1\obj\Debug\SystAnalys_lr1.csproj.GenerateResource.Cache
+D:\git_sibsuty\graph-2.0\SystAnalys_lr1\obj\Debug\SystAnalys_lr1.exe
+D:\git_sibsuty\graph-2.0\SystAnalys_lr1\obj\Debug\SystAnalys_lr1.pdb
