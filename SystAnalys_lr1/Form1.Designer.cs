@@ -192,7 +192,8 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(714, 255);
+            this.listBox1.HorizontalScrollbar = true;
+            this.listBox1.Location = new System.Drawing.Point(713, 267);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(183, 160);
             this.listBox1.TabIndex = 22;

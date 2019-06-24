@@ -12,6 +12,7 @@ namespace SystAnalys_lr1
         List<Edge> E;
         int[,] AMatrix;
         int [] distance;
+        int[] parent;
         bool[] visited;
         int startPoint;
         int endpoint;
@@ -34,6 +35,7 @@ namespace SystAnalys_lr1
             distance = new int[V.Count];
             int count, index = 0, i, u, m = startPoint + 1;
             visited = new bool [V.Count];
+            parent = new int[V.Count];
             for (i = 0; i < V.Count; i++)
             {
                 distance[i] = int.MaxValue; visited[i] = false;
@@ -47,6 +49,7 @@ namespace SystAnalys_lr1
                     if (!visited[i] && distance[i] <= min)
                     {
                         min = distance[i]; index = i;
+                        
                     }
                 u = index;
                 visited[u] = true;
@@ -57,24 +60,29 @@ namespace SystAnalys_lr1
                     {
                         distance[i] = distance[u] + AMatrix[u, i];
                         path += u;
+
+
                     }
-                 }
+                   
+                }
 
 
             }
             //"Стоимость пути из начальной вершины до остальных:\t\n";
-            string s="";
+            
             int j = 0;
-            s =Convert.ToString( distance[endpoint]);
-            //s += "\n";
-            //for (i = 0; i < V.Count; i++) if (distance[i] != int.MaxValue)
-            //    {
-            //        j = i + 1;
-            //        s += Convert.ToString(m) + " >" + Convert.ToString((j)) + "=" + Convert.ToString(distance[i]) + "\n";
-            //    }
-            //    cout << m << " > " << i + 1 << " = " << distance[i] << endl;
-            //else cout << m << " > " << i + 1 << " = " << "маршрут недоступен" << endl;
-            return s;
+           
+                        //s += "\n";
+                        //for (i = 0; i < V.Count; i++) if (distance[i] != int.MaxValue)
+                        //    {
+                        //        j = i + 1;
+                        //        path += Convert.ToString(m) + " >" + Convert.ToString((j)) + "=" + Convert.ToString(distance[i]) + "\n";
+                        //    }
+                        //    cout << m << " > " << i + 1 << " = " << distance[i] << endl;
+                        //else cout << m << " > " << i + 1 << " = " << "маршрут недоступен" << endl;
+                        path += " Стоимость пути:";
+            path += Convert.ToString(distance[endpoint]);
+            return path;
         }
         public int Dijkstra(int [,] AMatrix, int V)
         {

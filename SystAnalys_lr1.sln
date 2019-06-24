@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystAnalys_lr1", "SystAnaly
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystAnalys_lr1UnitTest1", "SystAnalys_lr1UnitTest1\SystAnalys_lr1UnitTest1.csproj", "{3F7CC94D-C6BC-4D51-989F-C53B6CD33C11}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMatrix", "TestMatrix\TestMatrix.csproj", "{3DFF4DAB-7DF1-49CE-B32A-92D1EE900250}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestVertexLilst", "TestVertexLilst\TestVertexLilst.csproj", "{AA488B0C-DF8F-4917-BA1C-8968C4710F9B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{3F7CC94D-C6BC-4D51-989F-C53B6CD33C11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F7CC94D-C6BC-4D51-989F-C53B6CD33C11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F7CC94D-C6BC-4D51-989F-C53B6CD33C11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DFF4DAB-7DF1-49CE-B32A-92D1EE900250}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DFF4DAB-7DF1-49CE-B32A-92D1EE900250}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DFF4DAB-7DF1-49CE-B32A-92D1EE900250}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DFF4DAB-7DF1-49CE-B32A-92D1EE900250}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA488B0C-DF8F-4917-BA1C-8968C4710F9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA488B0C-DF8F-4917-BA1C-8968C4710F9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA488B0C-DF8F-4917-BA1C-8968C4710F9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA488B0C-DF8F-4917-BA1C-8968C4710F9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
