@@ -12,7 +12,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace SystAnalys_lr1UnitTest1
 {
     [TestClass]
-    public class UnitTest1
+    public class Matrix
     {
         [TestMethod]
         public void TestMethod1()

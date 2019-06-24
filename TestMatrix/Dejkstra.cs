@@ -13,7 +13,7 @@ namespace TestMatrix
 
 {
     [TestClass]
-    public class UnitTest1
+    public class Dejkstra
     {
         [TestMethod]
         public void TestMethod1()

@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3F7CC94D-C6BC-4D51-989F-C53B6CD33C11}</ProjectGuid>
+    <ProjectGuid>{AA488B0C-DF8F-4917-BA1C-8968C4710F9B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SystAnalys_lr1UnitTest1</RootNamespace>
-    <AssemblyName>SystAnalys_lr1UnitTest1</AssemblyName>
+    <RootNamespace>TestVertexLilst</RootNamespace>
+    <AssemblyName>TestVertexLilst</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -50,7 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Matrix.cs" />
+    <Compile Include="VertexList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
