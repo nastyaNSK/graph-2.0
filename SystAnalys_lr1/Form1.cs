@@ -479,15 +479,17 @@ namespace SystAnalys_lr1
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            createAdjAndOut();
-            Dekstra deikstra = new Dekstra(V, E, AMatrix, Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text));
-            listBox1.Items.Clear();
-            string s = deikstra.Dijkstra();
-            listBox1.Items.Add(s);
-            G.drawALLGraph(V, E);
-        }
-    }
+		private void button3_Click(object sender, EventArgs e)
+		{
+			createAdjAndOut();
+			int[] parent = new int[V.Count];
+			Dekstra deikstra = new Dekstra(V, E, AMatrix, Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text), parent);
+
+			listBox1.Items.Clear();
+			string s = deikstra.Dijkstra();
+			listBox1.Items.Add(s);
+			G.drawALLGraph(V, E);
+		}
+	}
 }
 
